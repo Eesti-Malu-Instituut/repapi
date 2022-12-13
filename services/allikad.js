@@ -7,7 +7,7 @@ async function getMultiple(page = 1) {
   const offset = helper.getOffset(page, config.listPerPage)
   const rows = await db.query(
     `SELECT id, allikas, kood, prioriteetPerenimi, prioriteetEesnimi, prioriteetIsanimi, prioriteetEmanimi, prioriteetSünd, prioriteetSurm, prioriteetKirje 
-    FROM repis.allikas LIMIT ${offset},${config.listPerPage}`
+    FROM repis.allikad LIMIT ${offset},${config.listPerPage}`
   )
   const data = helper.emptyOrRows(rows)
   const meta = {page}
