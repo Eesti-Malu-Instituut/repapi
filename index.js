@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const port = 3000
 const allikadRouter = require("./routes/allikad")
+const persoonidRouter = require("./routes/persoonid")
 app.use(express.json())
 app.use(
   express.urlencoded({
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
 })
 
 app.use("/allikad", allikadRouter)
+app.use("/persoonid", persoonidRouter)
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
