@@ -10,5 +10,13 @@ router.get('/:id', async function(req, res, next) {
     next(err)
   }
 })
+router.get('/', async function(req, res, next) {
+  try {
+    res.json(await persoonid.getMultiple(req.query.page))
+  } catch (err) {
+    console.error(`Error while getting PERSOONID `, err.message)
+    next(err)
+  }
+})
 
 module.exports = router
