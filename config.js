@@ -1,5 +1,3 @@
-console.log(process.env)
-
 const config = {
   db: {
     host: process.env.MY_HOST || 'localhost',
