@@ -2,8 +2,6 @@ const db = require('./db')
 const helper = require('../helper')
 const config = require('../config')
 
-console.log(config)
-
 async function getMultiple(page = 1) {
   const offset = helper.getOffset(page, config.listPerPage)
   const rows = await db.query(
