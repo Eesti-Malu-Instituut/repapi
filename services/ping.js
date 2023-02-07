@@ -7,7 +7,7 @@ async function ping(req) {
 
   console.log(req)
   return {
-    reQ: util.inspect(req)
+    reQ: util.inspect(req, { showHidden: true, depth: null })
   }
 }
 
