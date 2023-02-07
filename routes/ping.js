@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const ping = require('../services/ping')
 
-router.get('/', async function(req, res, next) {
+router.post('/', async function(req, res, next) {
   try {
     res.json(await ping.ping(req))
   } catch (err) {

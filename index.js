@@ -1,5 +1,8 @@
+require('dotenv').config()
+
 const express = require("express")
 const app = express()
+
 const port = 3000
 const pingRouter = require("./routes/ping")
 const allikadRouter = require("./routes/allikad")
@@ -11,7 +14,7 @@ app.use(
   })
 )
 app.get("/", (req, res) => {
-  res.json({ message: "ok" })
+  res.json({ RepisAPI: "ok" })
 })
 
 app.use("/ping", pingRouter)
