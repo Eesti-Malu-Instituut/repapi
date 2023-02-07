@@ -6,7 +6,7 @@ async function ping(req) {
 
   console.log(req)
   return {
-    req
+    reQ: JSON.stringify(req, null, 2)
   }
 }
 
