@@ -4,6 +4,7 @@
 
 async function ping(req) {
 
+  console.log(req)
   return {
     req
   }
