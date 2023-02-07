@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const port = 3000
+const pingRouter = require("./routes/ping")
 const allikadRouter = require("./routes/allikad")
 const persoonidRouter = require("./routes/persoonid")
 app.use(express.json())
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
   res.json({ message: "ok" })
 })
 
+app.use("/ping", pingRouter)
 app.use("/allikad", allikadRouter)
 app.use("/persoonid", persoonidRouter)
 
